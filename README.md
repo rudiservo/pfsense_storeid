@@ -1,14 +1,14 @@
-# pfsense_storeid
+# PfSense Squid 3 storeid helper
 Storeid helper for squid3.4 and pfsense 2.6
 
 This software was design for PfSense Squid 3 package
 It can work on other Squid 3 deployments but the execute part of php
 may have to be changed from:
->#!/usr/local/bin/php -q
+>\#!/usr/local/bin/php -q
 
 to
 
->#!/bin/php
+>\#!/bin/php
 
 (just and example this may not work, check with your distro)
 
@@ -22,14 +22,14 @@ and at fit for your needs and limitations.
 copy all the file to /var/squid/storeid
 you can use scp
 
-> # scp -r "path_of_storeid" root@your_pfsense:/var/squid/storeid
+> \# scp -r "path_of_storeid" root@your_pfsense:/var/squid/storeid
 
 Change group and Permissions inside your pfsense box
 I know its not quite proper but I did had some issues with it
 
-> # chgrp -Rf proxy storeid/
-> # chown -Rf squid storeid/
-> # chmod -Rf 775 storeid
+> \# chgrp -Rf proxy storeid/
+> \# chown -Rf squid storeid/
+> \# chmod -Rf 775 storeid
 
 
 ## Squid Config
@@ -71,7 +71,7 @@ in case you want to debug go to cong/storeid.conf.php and set $_DEBUG =true
 you can also change the log file location.
 
 to test you just need to to
-> # ./storeid_helper.php storeid_rewrite
+> \# ./storeid_helper.php storeid_rewrite
 
 paste a URL to test and it should return a OK
 
