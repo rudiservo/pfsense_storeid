@@ -28,7 +28,9 @@ Change group and Permissions inside your pfsense box
 I know its not quite proper but I did had some issues with it
 
 > \# chgrp -Rf proxy storeid/
+
 > \# chown -Rf squid storeid/
+
 > \# chmod -Rf 775 storeid
 
 
