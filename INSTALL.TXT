@@ -1,6 +1,3 @@
-# pfsense_storeid
-Storeid helper for squid3.4 and pfsense 2.6
-
 This software was design for PfSense Squid 3 package
 It can work on other Squid 3 deployments but the execute part of php
 may have to be changed from:

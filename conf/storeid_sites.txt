@@ -1,0 +1,11 @@
+([^.]+\.)?adobe.com
+([^.]+\.)?java.com
+([^.]+\.)?sun.com
+([^.]+\.)?oracle.com
+([^.]+\.)?apple.com
+([^.]+\.)?apple.com
+([^.]+\.)?(download|(windows)?update)\.(microsoft\.)?com
+([^.]+\.)?ubuntu.com
+([^.]+\.)?steampowered.com
+([^.]+\.)?google.com
+([^.]+\.)?gstatic.com
