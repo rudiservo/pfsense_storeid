@@ -49,20 +49,18 @@ store_id_children 10 startup=5 idle=1 concurrency=0
 refresh_pattern ([^.]+\.)?(cs|content[1-9]|hsar|content-origin|client-download).steampowered.com/.*\.* 43200 100% 43200 reload-into-ims ignore-reload ignore-no-store override-expire override-lastmod
 refresh_pattern ([^.]+\.)?.akamai.steamstatic.com/.*\.* 43200 100% 43200 reload-into-ims ignore-reload ignore-no-store override-expire override-lastmod
 
-refresh_pattern ([^.]+\.)?adobe.com/.*\.(zip|exe) 43200 100% 43200 reload-into-ims ignore-reload ignore-no-store override-expire override-lastmod
-refresh_pattern ([^.]+\.)?java.com/.*\.(zip|exe) 43200 100% 43200 reload-into-ims ignore-reload ignore-no-store override-expire override-lastmod
-refresh_pattern ([^.]+\.)?sun.com/.*\.(zip|exe) 43200 100% 43200 reload-into-ims ignore-reload ignore-no-store override-expire override-lastmod
-refresh_pattern ([^.]+\.)?oracle.com/.*\.(zip|exe|tar.gz) 43200 100% 43200 reload-into-ims ignore-reload ignore-no-store override-expire override-lastmod
+refresh_pattern -i ([^.]+\.)?.adobe.com/.*\.(zip|exe) 43200 100% 43200 reload-into-ims ignore-reload ignore-no-store override-expire override-lastmod
+refresh_pattern -i ([^.]+\.)?.java.com/.*\.(zip|exe) 43200 100% 43200 reload-into-ims ignore-reload ignore-no-store override-expire override-lastmod
+refresh_pattern -i ([^.]+\.)?.sun.com/.*\.(zip|exe) 43200 100% 43200 reload-into-ims ignore-reload ignore-no-store override-expire override-lastmod
+refresh_pattern -i ([^.]+\.)?.oracle.com/.*\.(zip|exe|tar.gz) 43200 100% 43200 reload-into-ims ignore-reload ignore-no-store override-expire override-lastmod
 
 refresh_pattern -i appldnld\.apple\.com 43200 100% 43200 ignore-reload ignore-no-store override-expire override-lastmod
 refresh_pattern -i ([^.]+\.)?apple.com/.*\.(ipa) 43200 100% 43200 ignore-reload ignore-no-store override-expire override-lastmod
  
-refresh_pattern ([^.]+\.)?(download|(windows)?update)\.(microsoft\.)?com/.*\.(cab|exe|msi|msp|psf) 4320 100% 43200 reload-into-ims  ignore-reload ignore-no-store override-expire override-lastmod
+refresh_pattern -i  ([^.]+\.)?.google.com/.*\.(exe|crx) 10080 80% 43200 override-expire override-lastmod ignore-no-cache ignore-reload reload-into-ims ignore-private
+refresh_pattern -i ([^.]+\.)?g.static.com/.*\.(exe|crx) 10080 80% 43200 override-expire override-lastmod ignore-no-cache ignore-reload reload-into-ims ignore-private
  
-refresh_pattern -i  ([^.]+\.)?google.com/.*\.(exe|crx) 10080 80% 43200 override-expire override-lastmod ignore-no-cache ignore-reload reload-into-ims ignore-private
-refresh_pattern -i ([^.]+\.)?gstatic.com/.*\.(exe|crx) 10080 80% 43200 override-expire override-lastmod ignore-no-cache ignore-reload reload-into-ims ignore-private
- 
-refresh_pattern -i ([^.]+\.)?ubuntu.com/.*\.(deb) 10080 80% 43200 override-expire override-lastmod ignore-no-cache ignore-reload reload-into-ims ignore-private
+refresh_pattern -i ([^.]+\.)?.ubuntu.com/.*\.(deb) 10080 80% 43200 override-expire override-lastmod ignore-no-cache ignore-reload reload-into-ims ignore-private
 
 ```
 
@@ -96,8 +94,13 @@ check for permssions
 ##References
 
 http://wiki.sebeka.k12.mn.us/web_services:squid_update_cache
+
 http://wiki.squid-cache.org/Features/StoreID/DB
+
 http://wiki.squid-cache.org/Features/StoreID
+
 http://wiki.squid-cache.org/ConfigExamples/DynamicContent/YouTube
+
 http://blog.thelifeofkenneth.com/2014/08/using-squid-storeids-to-optimize-steams.html
+
 https://gist.github.com/PhirePhly/76345fa72ecdb6fb1d37#file-squid-conf

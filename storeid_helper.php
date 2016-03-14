@@ -87,6 +87,9 @@ if (!empty($rules)) {
         }
         echo $i_url;
         if ($_DEBUG) {
+            if (!$found) {
+                $i_url = "ERR - ".$url."\n";
+            }
             file_put_contents($_LOG_FILE, $i_url,  FILE_APPEND );
         }
     }

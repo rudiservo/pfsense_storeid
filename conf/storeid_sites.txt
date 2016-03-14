@@ -4,7 +4,6 @@
 ([^.]+\.)?oracle.com
 ([^.]+\.)?apple.com
 ([^.]+\.)?apple.com
-([^.]+\.)?(download|(windows)?update)\.(microsoft\.)?com
 ([^.]+\.)?ubuntu.com
 ([^.]+\.)?steampowered.com
 ([^.]+\.)?google.com
