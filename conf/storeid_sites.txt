@@ -6,5 +6,6 @@
 ([^.]+\.)?apple.com
 ([^.]+\.)?ubuntu.com
 ([^.]+\.)?steampowered.com
+([^.]+\.)?steamcontent.com
 ([^.]+\.)?google.com
 ([^.]+\.)?gstatic.com
