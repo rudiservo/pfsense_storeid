@@ -46,7 +46,7 @@ store_id_access deny all
 store_id_program /var/squid/storeid/storeid_helper.php /var/squid/storeid/storeid_rewrite
 store_id_children 10 startup=5 idle=1 concurrency=0
 
-refresh_pattern ([^.]+\.)?(cs|content[1-9]|hsar|content-origin|client-download).steampowered.com/.*\.* 43200 100% 43200 reload-into-ims ignore-reload ignore-no-store override-expire override-lastmod
+refresh_pattern ([^.]+\.)?(cs|content[1-9]|hsar|content-origin|client-download).[steampowered|steamcontent].com/.*\.* 43200 100% 43200 reload-into-ims ignore-reload ignore-no-store override-expire override-lastmod
 refresh_pattern ([^.]+\.)?.akamai.steamstatic.com/.*\.* 43200 100% 43200 reload-into-ims ignore-reload ignore-no-store override-expire override-lastmod
 
 refresh_pattern -i ([^.]+\.)?.adobe.com/.*\.(zip|exe) 43200 100% 43200 reload-into-ims ignore-reload ignore-no-store override-expire override-lastmod
