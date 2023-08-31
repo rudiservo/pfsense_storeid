@@ -73,6 +73,9 @@ you can also change the log file location.
 to test you just need to to
 > \# ./storeid_helper.php storeid_rewrite
 
+Or use the correct path to store id if you follow pfSense filepath conventions to test
+> /var/squid/storeid/storeid_helper.php  /var/squid/storeid/storeid_rewrite
+
 paste a URL to test and it should return a OK
 
 to exit just type quit.
